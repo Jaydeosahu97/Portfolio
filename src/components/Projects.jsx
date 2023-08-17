@@ -24,12 +24,12 @@ function Projects() {
     },
   ];
 
-  return <div className="">
-    {listOfProjects.map(e => <div key={e.name}> 
-        <h2>{e.name}</h2>
-        <h3>{e.about.technology}</h3>
+  return <div className="bg-slate-500">
+    {listOfProjects.map(e => <div className="mx-3 pt-3" key={e.name}> 
+        <h2 className="text-2xl">{e.name}</h2>
+        <h3 className="text-xl">Technology Used : {e.about.technology}</h3>
         <ul>
-            {e.about.features.map(l => <li key={l}>{l}</li>)}
+            {e.about.features.map(l => <li className="italic mx-4" key={l}>{l}</li>)}
         </ul>
     </div>)}
   </div>;
